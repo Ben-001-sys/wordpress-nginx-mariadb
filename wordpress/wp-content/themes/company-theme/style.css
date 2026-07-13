@@ -1,0 +1,12 @@
+/*
+Theme Name: Company Theme
+Theme URI: https://example.test
+Author: Development Team
+Description: Custom local-development theme.
+Version: 0.1.0
+Text Domain: company-theme
+*/
+
+body {
+    font-family: system-ui, sans-serif;
+}

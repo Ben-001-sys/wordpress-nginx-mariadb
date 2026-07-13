@@ -1,0 +1,30 @@
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Database backups
+backups/database/*
+!backups/database/.gitkeep
+
+# Upload backups
+backups/uploads/*
+!backups/uploads/.gitkeep
+
+# WordPress generated/runtime data
+wordpress/wp-content/uploads/
+wordpress/wp-content/cache/
+wordpress/wp-content/upgrade/
+wordpress/wp-content/debug.log
+wordpress/wp-content/ai1wm-backups/
+wordpress/wp-content/updraft/
+
+# Local editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Node and Composer dependencies where locally installed
+node_modules/
+vendor/
