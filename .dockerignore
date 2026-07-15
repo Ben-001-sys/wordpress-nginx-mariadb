@@ -1,0 +1,31 @@
+# Git
+.git
+.gitignore
+
+# Local secrets
+.env
+.env.*
+!.env.example
+secrets/
+
+# Persistent runtime data
+wordpress/wp-content/uploads/
+backups/
+
+# Local dependencies and generated content
+**/node_modules/
+**/vendor/
+**/.cache/
+**/dist/
+**/build/
+**/coverage/
+
+# Editor and OS metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+wordpress/wp-content/debug.log

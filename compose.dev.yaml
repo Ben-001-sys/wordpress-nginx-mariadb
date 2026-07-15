@@ -1,0 +1,16 @@
+# services:
+#   wordpress:
+#     environment:
+#       WORDPRESS_DEBUG: "1"
+
+#     volumes:
+#       - ./wordpress:/var/www/html
+#       - ./docker/php/conf.d/local.ini:/usr/local/etc/php/conf.d/zz-local.ini:ro
+
+#   nginx:
+#     ports:
+#       - "127.0.0.1:8080:80"
+
+#     volumes:
+#       - ./wordpress:/var/www/html:ro
+#       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro

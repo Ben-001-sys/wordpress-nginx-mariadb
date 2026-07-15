@@ -1,0 +1,21 @@
+http:
+
+  routers:
+
+    wordpress:
+
+      rule: "Host(`wordpress.test`)"
+
+      entryPoints:
+        - web
+
+      service: wordpress
+
+  services:
+
+    wordpress:
+
+      loadBalancer:
+
+        servers:
+          - url: "http://nginx:80"

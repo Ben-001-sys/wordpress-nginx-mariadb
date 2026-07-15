@@ -1,0 +1,12 @@
+{
+  "name": "company-block-theme",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}

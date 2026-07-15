@@ -12,6 +12,8 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+require_once __DIR__ . '/vendor/autoload.php';
+
 add_action('init', static function (): void {
     register_post_type('company_item', [
         'label' => 'Company Items',
