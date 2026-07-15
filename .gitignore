@@ -18,6 +18,7 @@ wordpress/wp-content/upgrade/
 wordpress/wp-content/debug.log
 wordpress/wp-content/ai1wm-backups/
 wordpress/wp-content/updraft/
+wordpress/wp-content/db.php
 
 # Local editor and OS files
 .vscode/
