@@ -1,35 +1,35 @@
-services:
-  wordpress:
-    image: wordpress:7.0.1-php8.4-fpm
-    restart: unless-stopped
+# services:
+#   wordpress:
+#     image: wordpress:7.0.1-php8.4-fpm
+#     restart: unless-stopped
 
-    read_only: true
+#     read_only: true
 
-    environment:
-      WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST:?required}
-      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:?required}
-      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER:?required}
-      WORDPRESS_DB_PASSWORD_FILE: /run/secrets/wordpress_db_password
+#     environment:
+#       WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST:?required}
+#       WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:?required}
+#       WORDPRESS_DB_USER: ${WORDPRESS_DB_USER:?required}
+#       WORDPRESS_DB_PASSWORD_FILE: /run/secrets/wordpress_db_password
 
-    secrets:
-      - wordpress_db_password
+#     secrets:
+#       - wordpress_db_password
 
-    tmpfs:
-      - /tmp
-      - /run
+#     tmpfs:
+#       - /tmp
+#       - /run
 
-    networks:
-      - frontend
-      - backend
+#     networks:
+#       - frontend
+#       - backend
 
-  nginx:
-    image: registry.example.com/company/wordpress-nginx:${APP_VERSION:?required}
-    restart: unless-stopped
+#   nginx:
+#     image: registry.example.com/company/wordpress-nginx:${APP_VERSION:?required}
+#     restart: unless-stopped
 
-    networks:
-      - edge
-      - frontend
+#     networks:
+#       - edge
+#       - frontend
 
-secrets:
-  wordpress_db_password:
-    external: true
+# secrets:
+#   wordpress_db_password:
+#     external: true
