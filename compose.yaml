@@ -74,14 +74,14 @@ services:
         define('WP_REDIS_PREFIX', getenv('WP_REDIS_PREFIX'));
         define('WP_CACHE_KEY_SALT', getenv('WP_CACHE_KEY_SALT'));
 
-        # define('WP_ALLOW_MULTISITE', ${WP_ALLOW_MULTISITE:-true});
+        define('WP_ALLOW_MULTISITE', ${WP_ALLOW_MULTISITE:-true});
 
-        # define('MULTISITE', ${WP_MULTISITE:-true});
-        # define('SUBDOMAIN_INSTALL', ${WP_SUBDOMAIN_INSTALL:-false});
-        # define('DOMAIN_CURRENT_SITE', '${WP_DOMAIN:-wordpress.test}');
-        # define('PATH_CURRENT_SITE', '${WP_PATH:-/}');
-        # define('SITE_ID_CURRENT_SITE', ${WP_SITE_ID:-1});
-        # define('BLOG_ID_CURRENT_SITE', ${WP_BLOG_ID:-1});
+        define('MULTISITE', ${WP_MULTISITE:-true});
+        define('SUBDOMAIN_INSTALL', ${WP_SUBDOMAIN_INSTALL:-false});
+        define('DOMAIN_CURRENT_SITE', '${WP_DOMAIN:-wordpress.test}');
+        define('PATH_CURRENT_SITE', '${WP_PATH:-/}');
+        define('SITE_ID_CURRENT_SITE', ${WP_SITE_ID:-1});
+        define('BLOG_ID_CURRENT_SITE', ${WP_BLOG_ID:-1});
 
     volumes:
       - wp_core:/var/www/html
