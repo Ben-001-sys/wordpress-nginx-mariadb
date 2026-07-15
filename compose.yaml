@@ -142,6 +142,7 @@ services:
 
     networks:
       - frontend
+      - dokploy-network
 
     # labels:
     #   - traefik.enable=true
