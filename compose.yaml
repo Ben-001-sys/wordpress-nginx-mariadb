@@ -38,9 +38,9 @@ services:
     #   dockerfile: docker/php/Dockerfile
     # target: development
 
-    depends_on:
-      db:
-        condition: service_healthy
+    # depends_on:
+    #   db:
+    #     condition: service_healthy
 
     environment:
       WORDPRESS_DB_HOST: ${WP_DB_HOST:-db:3306}
