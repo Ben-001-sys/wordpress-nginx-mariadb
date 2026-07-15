@@ -38,7 +38,7 @@ services:
     #   dockerfile: docker/php/Dockerfile
     # target: development
 
-    depends_on:
+    # depends_on:
       # db:
       #   condition: service_healthy
 
@@ -258,7 +258,7 @@ services:
 
     user: "33:33"
 
-    depends_on:
+    # depends_on:
       # db:
       #   condition: service_healthy
 
