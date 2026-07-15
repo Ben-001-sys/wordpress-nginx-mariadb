@@ -38,9 +38,9 @@ services:
     #   dockerfile: docker/php/Dockerfile
     # target: development
 
-    # depends_on:
-    #   db:
-    #     condition: service_healthy
+    depends_on:
+      db:
+        condition: service_healthy
 
     environment:
       WORDPRESS_DB_HOST: ${WP_DB_HOST:-db:3306}
@@ -106,6 +106,8 @@ services:
 
     # ports:
     #   - "127.0.0.1:8080:80"
+    expose:
+      - "80"
 
     environment:
       SERVER_NAME: ${SERVER_NAME:-wordpress.test}
