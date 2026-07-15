@@ -346,6 +346,9 @@ networks:
   backend:
     internal: true
 
+  dokploy-network:
+    external: true
+
 volumes:
   wp_core:
   db_data:
