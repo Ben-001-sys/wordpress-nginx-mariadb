@@ -189,7 +189,7 @@ services:
     working_dir: /var/www/html
 
     environment:
-      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_HOST: ${WP_DB_HOST:-db:3306}
       WORDPRESS_DB_NAME: ${WP_DB_NAME:-wordpress}
       WORDPRESS_DB_USER: ${WP_DB_USER:-wordpress}
       WORDPRESS_DB_PASSWORD: ${WP_DB_PASSWORD:?WP_DB_PASSWORD is required}
@@ -276,7 +276,7 @@ services:
       done
 
     environment:
-      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_HOST: ${WP_DB_HOST:-db:3306}
       WORDPRESS_DB_NAME: ${WP_DB_NAME:-wordpress}
       WORDPRESS_DB_USER: ${WP_DB_USER:-wordpress}
       WORDPRESS_DB_PASSWORD: ${WP_DB_PASSWORD:?required}
