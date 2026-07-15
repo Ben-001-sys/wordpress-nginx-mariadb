@@ -297,22 +297,22 @@ services:
       - frontend
       - backend
 
-  traefik:
-    image: traefik:v3.5
-    restart: unless-stopped
-    networks:
-      - frontend
-    command:
-      - "--api.dashboard=true"
-      - "--api.insecure=true"
-      - "--entrypoints.web.address=:80"
-      - "--providers.file.directory=/etc/traefik/dynamic"
-      - "--providers.file.watch=true"
-    ports:
-      - "80:80"
-      - "8088:8080"
-    volumes:
-      - ./dynamic:/etc/traefik/dynamic:ro
+  # traefik:
+  #   image: traefik:v3.5
+  #   restart: unless-stopped
+  #   networks:
+  #     - frontend
+  #   command:
+  #     - "--api.dashboard=true"
+  #     - "--api.insecure=true"
+  #     - "--entrypoints.web.address=:80"
+  #     - "--providers.file.directory=/etc/traefik/dynamic"
+  #     - "--providers.file.watch=true"
+  #   ports:
+  #     - "80:80"
+  #     - "8088:8080"
+  #   volumes:
+  #     - ./dynamic:/etc/traefik/dynamic:ro
 
   # adminer:
   #   image: adminer:latest
